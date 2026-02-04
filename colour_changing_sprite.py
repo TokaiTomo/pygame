@@ -19,16 +19,16 @@ def main():
             if event.type == pygame.QUIT:
                 done=True
         pressed= pygame.key.get_pressed()
-        if pressed[pygame.K_LEFT]: x-=3
-        if pressed[pygame.K_RIGHT]: x+=3
-        if pressed[pygame.K_UP]: x-=3
-        if pressed[pygame.K_DOWN]: x+=3
-        x=min((max(0,x)), screen_w-screen_h)
-        y=min((max(0,y)), screen_w-screen_h)
+        if pressed[pygame.K_LEFT]: x-=10
+        if pressed[pygame.K_RIGHT]: x+=10
+        if pressed[pygame.K_UP]: y-=10
+        if pressed[pygame.K_DOWN]: y+=10
+        x=min((max(0,x)), screen_w-sprite_w)
+        y=min((max(0,y)), screen_h-sprite_h)
         if x==0: current_color=colors['blue']
-        elif x == screen_w-screen_w: current_color=colors['yellow']
+        elif x == screen_w-sprite_w: current_color=colors['yellow']
         elif y==0: current_color=colors['red']
-        elif x == screen_h-screen_h: current_color=colors['green']
+        elif y == screen_h-sprite_h: current_color=colors['green']
         else:
             current_color=colors['white']
         screen.fill((0,0,0))
