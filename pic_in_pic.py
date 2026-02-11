@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Load images using BASE_DIR
 background_image = pygame.transform.scale(
-    pygame.image.load(os.path.join(BASE_DIR, "Arctic.png")).convert(),
+    pygame.image.load(os.path.join(BASE_DIR, "Antarctica.png")).convert(),
     (SCREEN_WIDTH, SCREEN_HEIGHT)
 )
 
